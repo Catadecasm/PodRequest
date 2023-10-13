@@ -1,0 +1,39 @@
+@use '@fem-pra/tokens/dist/scss/tokens' as *;
+
+.header {
+  margin: (($fem-size-offset-700 * 2) - $fem-size-offset-200) 0
+    ($fem-size-offset-400 * 7);
+
+  @media screen and (min-width: $fem-breakpoint-sm) {
+    margin: (($fem-size-offset-600 * 2) + $fem-size-offset-200) 0
+      ($fem-size-offset-400 * 19) ($fem-size-offset-700 + $fem-size-offset-400);
+  }
+  @media screen and (min-width: $fem-breakpoint-lg) {
+    margin: (($fem-size-offset-700 * 3) + $fem-size-offset-400) 0
+      (($fem-size-offset-700 * 3) + $fem-size-offset-400)
+      (($fem-size-offset-700 * 5) + $fem-size-offset-300);
+  }
+
+  &__picture {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0.1;
+    z-index: -1;
+
+    @media screen and (min-width: $fem-breakpoint-sm) {
+      left: 36.068%;
+      opacity: 1;
+    }
+    @media screen and (min-width: $fem-breakpoint-lg) {
+      margin-top: $fem-size-offset-600 + $fem-size-offset-300;
+      left: 38.333%;
+      top: auto;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+}

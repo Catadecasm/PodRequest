@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./assets/styles/index.scss"
+    />
+
+    <script defer="defer" type="module" src="./index.ts"></script>
+
+    <title>Pod request access landing page | Frontend Mentor</title>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="header__logo"
+        src="./assets/icons/logo.svg"
+        alt="pod logo"
+      >
+      <picture class="header__picture">
+        <source
+          srcset="./assets/images/desktop/image-host.jpg"
+          media="(min-width: 1440px)"
+        >
+        <source
+          srcset="./assets/images/tablet/image-host.jpg"
+          media="(min-width: 768px)"
+        >
+        <img
+          class="header__image"
+          src="./assets/images/mobile/image-host.jpg"
+          alt="musician singing at the studio"
+        >
+      </picture>
+    </header>
+    <main class="main">
+      <h1 class="main__title">
+        <span class="main__title--accent">Publish your podcasts</span> everywhere.
+      </h1>
+      <p class="main__body">
+        Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify,
+        Apple Podcasts, Google Podcasts, Pocket Casts and more!
+      </p>
+      <section class="main__footer">
+        <form
+          novalidate
+          class="request-form"
+        >
+          <input
+            id="email"
+            type="email"
+            name="email"
+            class="request-form__input"
+            placeholder="Email address"
+            required="required"
+            aria-required="true"
+            aria-labelledby="request-button"
+            aria-describedby="request-email-messsage"
+          />
+          <span
+            id="request-email-messsage"
+            class="request-form__helper-text request-form__helper-text--error"
+            aria-live="assertive"
+          >
+          </span>
+          <button
+            id="request-button"
+            type="submit"
+            class="request-form__button"
+          >
+            Request access
+          </button>
+        </form>
+        <ul class="podcasts">
+          <li class="podcasts__item">
+            <a
+              class="podcasts__link icon icon--spotify"
+              href="#"
+            >
+              Spotify
+            </a>
+          </li>
+          <li class="podcasts__item">
+            <a
+              class="podcasts__link icon icon--apple"
+              href="#"
+            >
+              Apple Podcast
+            </a>
+          </li>
+          <li class="podcasts__item">
+            <a
+              class="podcasts__link icon icon--google"
+              href="#"
+            >
+              Google Podcast
+            </a>
+          </li>
+          <li class="podcasts__item">
+            <a
+              class="podcasts__link icon icon--pocket"
+              href="#"
+            >
+              Pocket Cast
+            </a>
+          </li>
+        </ul>
+  </body>
+</html>

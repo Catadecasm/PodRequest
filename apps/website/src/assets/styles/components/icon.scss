@@ -1,0 +1,34 @@
+@use '@fem-pra/tokens/dist/scss/tokens' as *;
+
+.icon {
+  display: grid;
+  height: $fem-size-offset-500 + $fem-size-offset-100;
+
+  @media screen and (min-width: $fem-breakpoint-sm) {
+    height: $fem-size-offset-600 + $fem-size-offset-300;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    height: inherit;
+    grid-area: 1/-1;
+    mask: no-repeat center/contain;
+  }
+
+  &--spotify::after {
+    mask-image: url('@/assets/icons/spotify.svg');
+  }
+
+  &--apple::after {
+    mask-image: url('@/assets/icons/apple-podcast.svg');
+  }
+
+  &--google::after {
+    mask-image: url('@/assets/icons/google-podcasts.svg');
+  }
+
+  &--pocket::after {
+    mask-image: url('@/assets/icons/pocket-casts.svg');
+  }
+}
